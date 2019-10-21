@@ -18,6 +18,8 @@
 
 package org.bitcoinj.core;
 
+import com.google.common.base.Objects;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -25,7 +27,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.bitcoinj.core.Utils.*;
-import com.google.common.base.Objects;
 
 /**
  * <p>A data structure that contains proofs of block inclusion for one or more transactions, in an efficient manner.</p>
