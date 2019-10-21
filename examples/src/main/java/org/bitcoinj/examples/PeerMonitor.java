@@ -15,24 +15,22 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
+package org.bitcoinj_cash.examples;
 
-import org.bitcoinj.core.listeners.PeerConnectedEventListener;
-import org.bitcoinj.core.listeners.PeerDisconnectedEventListener;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.Peer;
-import org.bitcoinj.core.PeerGroup;
-import org.bitcoinj.net.discovery.DnsDiscovery;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
+import org.bitcoinj_cash.core.NetworkParameters;
+import org.bitcoinj_cash.core.Peer;
+import org.bitcoinj_cash.core.PeerGroup;
+import org.bitcoinj_cash.core.listeners.PeerConnectedEventListener;
+import org.bitcoinj_cash.core.listeners.PeerDisconnectedEventListener;
+import org.bitcoinj_cash.net.discovery.DnsDiscovery;
+import org.bitcoinj_cash.params.MainNetParams;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
 
-import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableCellRenderer;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;

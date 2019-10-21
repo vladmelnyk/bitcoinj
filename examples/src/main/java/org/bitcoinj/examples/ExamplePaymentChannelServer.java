@@ -15,25 +15,22 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
+package org.bitcoinj_cash.examples;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.protobuf.ByteString;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.Sha256Hash;
-import org.bitcoinj.core.VerificationException;
-import org.bitcoinj.kits.WalletAppKit;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.protocols.channels.*;
-import org.bitcoinj.utils.BriefLogFormatter;
-import org.bitcoinj.wallet.WalletExtension;
-
-import com.google.common.collect.ImmutableList;
-
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.protobuf.ByteString;
+import org.bitcoinj_cash.core.Coin;
+import org.bitcoinj_cash.core.NetworkParameters;
+import org.bitcoinj_cash.core.Sha256Hash;
+import org.bitcoinj_cash.core.VerificationException;
+import org.bitcoinj_cash.kits.WalletAppKit;
+import org.bitcoinj_cash.params.RegTestParams;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
+import org.bitcoinj_cash.wallet.WalletExtension;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;

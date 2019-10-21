@@ -15,21 +15,19 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
-
-import org.bitcoinj.core.*;
-import org.bitcoinj.crypto.KeyCrypterException;
-import org.bitcoinj.kits.WalletAppKit;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.params.TestNet3Params;
-import org.bitcoinj.utils.BriefLogFormatter;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.listeners.WalletCoinsReceivedEventListener;
+package org.bitcoinj_cash.examples;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.MoreExecutors;
+import org.bitcoinj_cash.crypto.KeyCrypterException;
+import org.bitcoinj_cash.kits.WalletAppKit;
+import org.bitcoinj_cash.params.MainNetParams;
+import org.bitcoinj_cash.params.RegTestParams;
+import org.bitcoinj_cash.params.TestNet3Params;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
+import org.bitcoinj_cash.wallet.Wallet;
+import org.bitcoinj_cash.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import java.io.File;
 

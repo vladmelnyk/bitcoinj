@@ -15,28 +15,26 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
-
-import joptsimple.OptionParser;
-import joptsimple.OptionSet;
-import joptsimple.OptionSpec;
-import org.bitcoinj.core.*;
-import org.bitcoinj.kits.WalletAppKit;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.protocols.channels.PaymentChannelClient;
-import org.bitcoinj.protocols.channels.PaymentChannelClientConnection;
-import org.bitcoinj.protocols.channels.StoredPaymentChannelClientStates;
-import org.bitcoinj.protocols.channels.ValueOutOfRangeException;
-import org.bitcoinj.utils.BriefLogFormatter;
-import org.bitcoinj.utils.Threading;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.WalletExtension;
+package org.bitcoinj_cash.examples;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.Uninterruptibles;
+import joptsimple.OptionParser;
+import joptsimple.OptionSet;
+import joptsimple.OptionSpec;
+import org.bitcoinj_cash.kits.WalletAppKit;
+import org.bitcoinj_cash.params.RegTestParams;
+import org.bitcoinj_cash.protocols.channels.PaymentChannelClient;
+import org.bitcoinj_cash.protocols.channels.PaymentChannelClientConnection;
+import org.bitcoinj_cash.protocols.channels.StoredPaymentChannelClientStates;
+import org.bitcoinj_cash.protocols.channels.ValueOutOfRangeException;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
+import org.bitcoinj_cash.utils.Threading;
+import org.bitcoinj_cash.wallet.Wallet;
+import org.bitcoinj_cash.wallet.WalletExtension;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
@@ -46,7 +44,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 
-import static org.bitcoinj.core.Coin.CENT;
+import static org.bitcoinj_cash.core.Coin.CENT;
 
 /**
  * Simple client that connects to the given host, opens a channel, and pays one cent.

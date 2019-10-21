@@ -14,26 +14,24 @@
 
 package wallettemplate;
 
-import javafx.scene.layout.HBox;
-import org.bitcoinj.core.*;
-import org.bitcoinj.wallet.SendRequest;
-import org.bitcoinj.wallet.Wallet;
-
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import org.bitcoinj_cash.wallet.SendRequest;
+import org.bitcoinj_cash.wallet.Wallet;
 import org.spongycastle.crypto.params.KeyParameter;
 import wallettemplate.controls.BitcoinAddressValidator;
 import wallettemplate.utils.TextFieldValidator;
 import wallettemplate.utils.WTUtils;
 
+import javax.annotation.Nullable;
+
 import static com.google.common.base.Preconditions.checkState;
 import static wallettemplate.utils.GuiUtils.*;
-
-import javax.annotation.Nullable;
 
 public class SendMoneyController {
     public Button sendBtn;

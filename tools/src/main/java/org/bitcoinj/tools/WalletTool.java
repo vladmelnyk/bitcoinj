@@ -15,25 +15,8 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.tools;
+package org.bitcoinj_cash.tools;
 
-import org.bitcoinj.core.*;
-import org.bitcoinj.crypto.*;
-import org.bitcoinj.net.discovery.DnsDiscovery;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.params.TestNet3Params;
-import org.bitcoinj.protocols.payments.PaymentProtocol;
-import org.bitcoinj.protocols.payments.PaymentProtocolException;
-import org.bitcoinj.protocols.payments.PaymentSession;
-import org.bitcoinj.script.ScriptBuilder;
-import org.bitcoinj.store.*;
-import org.bitcoinj.uri.BitcoinURI;
-import org.bitcoinj.uri.BitcoinURIParseException;
-import org.bitcoinj.utils.BriefLogFormatter;
-import org.bitcoinj.wallet.DeterministicSeed;
-import org.bitcoinj.wallet.DeterministicUpgradeRequiredException;
-import org.bitcoinj.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
@@ -46,27 +29,31 @@ import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
-
-import org.bitcoinj.core.listeners.BlocksDownloadedEventListener;
-import org.bitcoinj.core.listeners.DownloadProgressTracker;
-import org.bitcoinj.wallet.MarriedKeyChain;
-import org.bitcoinj.wallet.Protos;
-import org.bitcoinj.wallet.SendRequest;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.WalletExtension;
-import org.bitcoinj.wallet.WalletProtobufSerializer;
-import org.bitcoinj.wallet.Wallet.BalanceType;
-import org.bitcoinj.wallet.listeners.WalletChangeEventListener;
-import org.bitcoinj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.bitcoinj.wallet.listeners.WalletCoinsSentEventListener;
-import org.bitcoinj.wallet.listeners.WalletReorganizeEventListener;
+import org.bitcoinj_cash.core.listeners.BlocksDownloadedEventListener;
+import org.bitcoinj_cash.core.listeners.DownloadProgressTracker;
+import org.bitcoinj_cash.net.discovery.DnsDiscovery;
+import org.bitcoinj_cash.params.MainNetParams;
+import org.bitcoinj_cash.params.RegTestParams;
+import org.bitcoinj_cash.params.TestNet3Params;
+import org.bitcoinj_cash.protocols.payments.PaymentProtocol;
+import org.bitcoinj_cash.protocols.payments.PaymentProtocolException;
+import org.bitcoinj_cash.protocols.payments.PaymentSession;
+import org.bitcoinj_cash.script.ScriptBuilder;
+import org.bitcoinj_cash.uri.BitcoinURI;
+import org.bitcoinj_cash.uri.BitcoinURIParseException;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
+import org.bitcoinj_cash.wallet.*;
+import org.bitcoinj_cash.wallet.Wallet.BalanceType;
+import org.bitcoinj_cash.wallet.listeners.WalletChangeEventListener;
+import org.bitcoinj_cash.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoinj_cash.wallet.listeners.WalletCoinsSentEventListener;
+import org.bitcoinj_cash.wallet.listeners.WalletReorganizeEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
 import org.spongycastle.util.encoders.Hex;
 
 import javax.annotation.Nullable;
-import java.io.*;
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -83,8 +70,8 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 
-import static org.bitcoinj.core.Coin.parseCoin;
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.bitcoinj_cash.core.Coin.parseCoin;
 
 /**
  * A command line tool for manipulating wallets and working with Bitcoin.
@@ -107,7 +94,7 @@ public class WalletTool {
     private static File chainFileName;
     private static ValidationMode mode;
     private static String password;
-    private static org.bitcoin.protocols.payments.Protos.PaymentRequest paymentRequest;
+    private static org.bitcoin_cash.protocols.payments.Protos.PaymentRequest paymentRequest;
     private static OptionSpec<Integer> lookaheadSize;
 
     public static class Condition {
@@ -1033,7 +1020,7 @@ public class WalletTool {
                 System.exit(1);
             }
             try {
-                paymentRequest = org.bitcoin.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
+                paymentRequest = org.bitcoin_cash.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
             } catch(IOException e) {
                 System.err.println("Failed to parse payment request from file " + e.getMessage());
                 System.exit(1);

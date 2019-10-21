@@ -14,9 +14,6 @@
 
 package wallettemplate;
 
-import org.bitcoinj.core.listeners.DownloadProgressTracker;
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.utils.MonetaryFormat;
 import com.subgraph.orchid.TorClient;
 import com.subgraph.orchid.TorInitializationListener;
 import javafx.animation.FadeTransition;
@@ -29,6 +26,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
+import org.bitcoinj_cash.core.Coin;
+import org.bitcoinj_cash.core.listeners.DownloadProgressTracker;
+import org.bitcoinj_cash.utils.MonetaryFormat;
 import org.fxmisc.easybind.EasyBind;
 import wallettemplate.controls.ClickableBitcoinAddress;
 import wallettemplate.controls.NotificationBarPane;

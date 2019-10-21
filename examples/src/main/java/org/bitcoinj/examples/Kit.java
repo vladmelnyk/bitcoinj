@@ -12,22 +12,20 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
+package org.bitcoinj_cash.examples;
 
-import org.bitcoinj.core.*;
-import org.bitcoinj.kits.WalletAppKit;
-import org.bitcoinj.params.TestNet3Params;
-import org.bitcoinj.script.Script;
-import org.bitcoinj.wallet.Wallet;
-import org.bitcoinj.wallet.listeners.KeyChainEventListener;
-import org.bitcoinj.wallet.listeners.ScriptsChangeEventListener;
-import org.bitcoinj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.bitcoinj.wallet.listeners.WalletCoinsSentEventListener;
+import org.bitcoinj_cash.core.listeners.TransactionConfidenceEventListener;
+import org.bitcoinj_cash.kits.WalletAppKit;
+import org.bitcoinj_cash.params.TestNet3Params;
+import org.bitcoinj_cash.script.Script;
+import org.bitcoinj_cash.wallet.Wallet;
+import org.bitcoinj_cash.wallet.listeners.KeyChainEventListener;
+import org.bitcoinj_cash.wallet.listeners.ScriptsChangeEventListener;
+import org.bitcoinj_cash.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.bitcoinj_cash.wallet.listeners.WalletCoinsSentEventListener;
 
 import java.io.File;
 import java.util.List;
-
-import org.bitcoinj.core.listeners.TransactionConfidenceEventListener;
 
 /**
  * The following example shows how to use the by bitcoinj provided WalletAppKit.

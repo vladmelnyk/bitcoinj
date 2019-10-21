@@ -15,30 +15,23 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.tools;
+package org.bitcoinj_cash.tools;
 
-import org.bitcoinj.core.listeners.NewBestBlockListener;
-import org.bitcoinj.core.*;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.RegTestParams;
-import org.bitcoinj.params.TestNet3Params;
-import org.bitcoinj.store.BlockStore;
-import org.bitcoinj.store.MemoryBlockStore;
-import org.bitcoinj.utils.BriefLogFormatter;
-import org.bitcoinj.utils.Threading;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
+import org.bitcoinj_cash.core.listeners.NewBestBlockListener;
+import org.bitcoinj_cash.params.MainNetParams;
+import org.bitcoinj_cash.params.RegTestParams;
+import org.bitcoinj_cash.params.TestNet3Params;
+import org.bitcoinj_cash.store.BlockStore;
+import org.bitcoinj_cash.store.MemoryBlockStore;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
+import org.bitcoinj_cash.utils.Threading;
 
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;

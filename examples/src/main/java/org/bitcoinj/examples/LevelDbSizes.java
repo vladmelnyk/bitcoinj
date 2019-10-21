@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
-
-import static org.fusesource.leveldbjni.JniDBFactory.*;
-
-import java.io.File;
-import java.io.IOException;
+package org.bitcoinj_cash.examples;
 
 import org.iq80.leveldb.DB;
 import org.iq80.leveldb.Options;
 import org.iq80.leveldb.Range;
+
+import java.io.File;
+import java.io.IOException;
+
+import static org.fusesource.leveldbjni.JniDBFactory.*;
 
 public class LevelDbSizes {
 

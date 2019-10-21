@@ -14,11 +14,11 @@
 
 package wallettemplate.controls;
 
-import org.bitcoinj.core.Address;
-import org.bitcoinj.core.AddressFormatException;
-import org.bitcoinj.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import org.bitcoinj_cash.core.Address;
+import org.bitcoinj_cash.core.AddressFormatException;
+import org.bitcoinj_cash.core.NetworkParameters;
 import wallettemplate.utils.TextFieldValidator;
 
 /**

@@ -14,7 +14,18 @@
  * limitations under the License.
  */
 
-package org.bitcoinj.examples;
+package org.bitcoinj_cash.examples;
+
+import org.bitcoinj_cash.core.*;
+import org.bitcoinj_cash.crypto.TransactionSignature;
+import org.bitcoinj_cash.params.MainNetParams;
+import org.bitcoinj_cash.script.Script;
+import org.bitcoinj_cash.script.ScriptBuilder;
+import org.bitcoinj_cash.script.ScriptChunk;
+import org.bitcoinj_cash.signers.LocalTransactionSigner;
+import org.bitcoinj_cash.signers.TransactionSigner.ProposedTransaction;
+import org.bitcoinj_cash.wallet.KeyBag;
+import org.bitcoinj_cash.wallet.RedeemData;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -23,25 +34,7 @@ import java.security.SecureRandom;
 import java.util.EnumSet;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-
-import org.bitcoinj.core.Coin;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.core.ScriptException;
-import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.TransactionInput;
-import org.bitcoinj.core.TransactionOutput;
-import org.bitcoinj.core.Utils;
-import org.bitcoinj.crypto.TransactionSignature;
-import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.script.Script;
-import org.bitcoinj.script.ScriptBuilder;
-import org.bitcoinj.script.ScriptChunk;
-import static org.bitcoinj.script.ScriptOpCodes.getOpCodeName;
-import org.bitcoinj.signers.LocalTransactionSigner;
-import org.bitcoinj.signers.TransactionSigner.ProposedTransaction;
-import org.bitcoinj.wallet.KeyBag;
-import org.bitcoinj.wallet.RedeemData;
+import static org.bitcoinj_cash.script.ScriptOpCodes.getOpCodeName;
 
 /**
  * Test case generator for transactions with low-S and high-S signatures, to

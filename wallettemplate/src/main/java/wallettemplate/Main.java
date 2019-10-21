@@ -14,14 +14,6 @@
 
 package wallettemplate;
 
-import com.google.common.util.concurrent.*;
-import javafx.scene.input.*;
-import org.bitcoinj.core.NetworkParameters;
-import org.bitcoinj.kits.WalletAppKit;
-import org.bitcoinj.params.*;
-import org.bitcoinj.utils.BriefLogFormatter;
-import org.bitcoinj.utils.Threading;
-import org.bitcoinj.wallet.DeterministicSeed;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -30,6 +22,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import org.bitcoinj_cash.core.NetworkParameters;
+import org.bitcoinj_cash.kits.WalletAppKit;
+import org.bitcoinj_cash.utils.BriefLogFormatter;
+import org.bitcoinj_cash.utils.Threading;
+import org.bitcoinj_cash.wallet.DeterministicSeed;
 import wallettemplate.controls.NotificationBarPane;
 import wallettemplate.utils.GuiUtils;
 import wallettemplate.utils.TextFieldValidator;
